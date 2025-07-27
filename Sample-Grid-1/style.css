@@ -1,0 +1,96 @@
+body{
+    background-color: gainsboro;
+    padding: 0
+    ;
+}
+.head{
+    background-color:rgb(113, 207, 238);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    padding-left: 2rem;
+}
+.navi{
+     display: flex;
+     gap:2rem;
+    list-style-type: none;
+    padding-right: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+.me{
+    margin-top: 2rem;
+    background-color:white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.name{
+    font-size: 2rem;
+    text-align: center;
+    font-family:sans-serif;
+    color: rgb(199, 146, 82) ;
+}
+.pro-name{
+    font-size: 2rem;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    color: rgb(199, 146, 82);
+}
+.pro{
+    
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+.img-1{
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+.img-2{
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius:1rem ;
+    text-align: center;
+    
+}
+.img-3{
+    background-color: whitesmoke;
+    padding: 1rem;
+    text-align: center;
+    border-radius:1rem ;
+}
+.con{
+    font-size: 3rem;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    color: rgb(199, 146, 82);
+}
+.detail{
+    background-color: whitesmoke;
+    width: vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+input{
+    padding: 0.2rem;
+    border: 2px ridge black;
+    border-radius: 0.2rem;
+}
+button{
+    border-color: palevioletred;
+}
+button:hover{
+    background-color: pink;
+}
+input:hover{
+    border-color: palevioletred;
+}
