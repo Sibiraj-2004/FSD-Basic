@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucket-List</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-gradient-to-r from-blue-400 via-purple-200 to-blue-300 my-4">
+    <div class="max-w-3xl mx-auto p-6 mb-4 bg-white rounded shadow-lg antialised leading-normal tracking-normal">
+        <h1 class="text-3xl font-sans font-semibold text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-400" >Bucket List Tracker</h1>
+
+        <section class="mb-8">
+            <h2 class="text-lg font-sans font-semibold color-gray-800 py-5 mb-4">Add To Bucket List</h2> 
+            <div class="grid grid-cols-1 sm:grid-cols-3 mb-4 gap-4">
+                <input type="text" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"  id="description" placeholder="What do you want to achieve?">
+                <select class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" id="category">
+                   <option value="select">Select Option</option>
+                   <option value="Travel">Travel</option> 
+                   <option value="Skills">Skills</option>
+                   <option value="Health">Health</option>
+                   <option value="Others">Others</option>
+                </select>
+                <input type="date" class="p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" id="target-date">
+                <button onclick="additem()" class="px-4 py-2 w-full sm:w-auto border border-gray-300 bg-gradient-to-r from-pink-500 to-purple-400 text-white font-sans rounded-lg hover:from-purple-600 hover:to-pink-500">Add item</button>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-lg font-semibold  text-gray-800 mb-4">Progress</h2>
+            <div class="w-full bg-gray-300 rounded-lg h-4 mb-4">
+            <div id="progress-bar" class="bg-gradient-to-r from-green-400 to-blue-500 h-4 rounded-full" style="width: 0%;"></div>
+            <p class="text-gray-600 py-2" >complete:<span id="completed-count">0</span>/<span id="total-count">0</span></p>
+            </div>
+        </section>
+
+
+        <section class="py-5">
+            <h2 class="text-lg font-semibold  text-gray-800 mb-4">Filter by Catogery</h2>
+            <div class="flex gap-4">
+                <label>
+                    <input type="radio" name="filter" value="All" class="mr-1" onclick="filteritem('All')" checked>All
+                </label>
+                 <label>
+                    <input type="radio" name="filter" value="Travel" class="mr-1" onclick="filteritem('Travel')" >Travel
+                </label>
+                 <label>
+                    <input type="radio" name="filter" value="Skills" class="mr-1" onclick="filteritem('Skills')" >Skills
+                </label>
+                 <label>
+                    <input type="radio" name="filter" value="Health" class="mr-1" onclick="filteritem('Health')" >Health
+                </label>
+                 <label>
+                    <input type="radio" name="filter" value="Others" class="mr-1" onclick="filteritem('Others')">Others
+                </label>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h2 class="text-lg font-semibold  text-gray-800 mb-4">Your Bucket List</h2>
+            <ul id="Bucket-List" class="space-y-4"></ul>
+        </section>
+
+    </div>
+
+    <script src="./app.js"> </script>
+</body>
+</html>
